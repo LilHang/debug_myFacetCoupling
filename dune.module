@@ -1,0 +1,12 @@
+################################
+# Dune module information file #
+################################
+
+# Name of the module
+Module: debug_myFacetCoupling_upload
+Version: 1.0
+Maintainer: lihang0614@whu.edu.cn
+# Required build dependencies
+Depends: dumux
+# Optional build dependencies
+#Suggests:

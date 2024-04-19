@@ -1,0 +1,37 @@
+[Problem]
+EnableGravity = true
+
+[Grid]
+# File = ./grids/LI_geometry_coarse.msh
+File = ./grids/LI_geometry.msh
+DomainMarkers = true # enable domain markers
+
+[Matrix]
+Problem.Name = matrix
+SpatialParams.Permeability = 3.65e-11
+BoundaryHeadInCm = 38.39
+
+[LowDim]
+Problem.Name = lowdim
+SpatialParams.Aperture = 1.4e-4
+SpatialParams.Permeability = 2.85e-11
+SpatialParams.TransferCoefficient = 1.0
+
+[FacetCoupling]
+Xi = 1
+
+[Vtk]
+OutputName = test_md_facet_1p_gravity
+
+# [Assembly]
+# NumericDifference.BaseEpsilon = 1e5
+
+[Newton]
+EnableShiftCriterion = false
+EnableResidualCriterion = true
+MaxSteps = 50
+
+[Component]
+LiquidDensity = 1000
+LiquidDynamicViscosity = 1e-3
+
